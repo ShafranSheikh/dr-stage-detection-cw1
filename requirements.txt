@@ -1,0 +1,13 @@
+# Local environment for the Streamlit prototype (macOS, Apple M2).
+# Built with the same recipe as the module's setup_env.sh:
+#   /opt/anaconda3/bin/python3 -m venv venv && source venv/bin/activate
+# Pin tensorflow to Kaggle's version only if a model fails to load, e.g. tensorflow==2.20.*
+tensorflow
+streamlit
+opencv-python
+numpy
+pandas
+matplotlib
+scikit-learn
+pillow
+ipykernel
