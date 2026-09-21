@@ -1,0 +1,30 @@
+{
+  "images_total": 3662,
+  "images_kept": 3489,
+  "exact_copies_removed": 96,
+  "identical_files_with_disagreeing_stages": 62,
+  "class_counts_total": {
+    "No DR": 1805,
+    "Mild": 370,
+    "Moderate": 999,
+    "Severe": 193,
+    "Proliferative": 295
+  },
+  "byte_identical_images": 251,
+  "near_duplicate_pairs": 13,
+  "images_in_duplicate_groups": 23,
+  "near_duplicate_groups": 11,
+  "largest_group": 3,
+  "conflicting_groups_dropped": 7,
+  "images_dropped": 173,
+  "low_quality_flagged": 300,
+  "split_sizes": {
+    "train": 2441,
+    "val": 524,
+    "test": 524
+  },
+  "similarity_threshold_chosen": 0.97,
+  "max_group_allowed": 10,
+  "dhash_pairs_if_used": 173296,
+  "seed": 42
+}

@@ -17,6 +17,7 @@ Items marked **[Additional knowledge]** are not in the practicals. Each one will
 | Framework | **TensorFlow / Keras** | See the explanation below. |
 | "DR + stage" | **One model, two answers** | See the explanation below. |
 | Extra lecture material | None | Classical image processing (contrast, sharpening) is treated as additional knowledge. |
+| **Report authorship** | **Mohamed writes the report. Claude supplies material only, and nothing goes in unverified.** | It is his submission; he must be able to stand behind every sentence and every number. |
 
 ### Why TensorFlow/Keras (plain English)
 
@@ -388,6 +389,8 @@ In the report we evaluate **both** answers: the 5-stage results and the Yes/No r
 | References | 0.5 | — |
 
 Every figure gets a caption and a sentence explaining why it matters. There are no decorative screenshots.
+
+**How the report gets written.** Mohamed writes it. Claude's part is to supply the raw material for each section — the figures, the tables, the measured numbers, explanations of what a result means, and suggested structure — and to say plainly where each number came from so it can be checked against the notebook that produced it. Claude does not produce a finished report to be submitted as-is, and never writes a figure, metric or claim that has not come out of a run Mohamed can reproduce. Anything uncertain is flagged as uncertain rather than smoothed over.
 
 ### 3.19 Video demonstration
 - **What:** a 10–12 minute recording (the lecturer's limit is 20). Outline:
