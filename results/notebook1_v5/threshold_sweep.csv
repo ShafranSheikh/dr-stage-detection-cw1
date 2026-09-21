@@ -1,0 +1,8 @@
+cut,pairs,groups,images_in_groups,largest_group,chains,final
+0.95,274,13,104,64,True,False
+0.96,46,12,46,21,True,False
+0.97,13,11,23,3,False,False
+0.98,11,9,19,3,False,False
+0.982,11,9,19,3,False,True
+0.99,11,9,19,3,False,False
+0.995,9,9,18,2,False,False
