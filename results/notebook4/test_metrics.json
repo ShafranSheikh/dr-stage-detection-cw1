@@ -1,0 +1,176 @@
+{
+  "model": {
+    "name": "E5_EfficientNetB3_s42",
+    "config": "E5_EfficientNetB3",
+    "backbone": "EfficientNetB3",
+    "variant": "B",
+    "balance": "none",
+    "fine_tune_lr": 0.0001,
+    "image_size": 300,
+    "best_epoch": 21
+  },
+  "test_images": 525,
+  "test_images_per_stage": {
+    "No DR": 270,
+    "Mild": 51,
+    "Moderate": 139,
+    "Severe": 26,
+    "Proliferative": 39
+  },
+  "validation_check": {
+    "identical_answers": 1.0,
+    "accuracy": 0.8298,
+    "macro_f1": 0.6408,
+    "qwk": 0.867,
+    "dr_accuracy": 0.9675,
+    "dr_sensitivity": 0.937,
+    "dr_specificity": 0.9963
+  },
+  "results": {
+    "final model (test)": {
+      "accuracy": 0.8171,
+      "macro_f1": 0.6171,
+      "qwk": 0.8998,
+      "dr_accuracy": 0.9733,
+      "dr_sensitivity": 0.9529,
+      "dr_specificity": 0.9926,
+      "macro_precision": 0.6642,
+      "macro_recall": 0.596,
+      "weighted_f1": 0.8042,
+      "dr_precision": 0.9918,
+      "dr_f1": 0.972,
+      "referable_sensitivity": 0.9314,
+      "referable_specificity": 0.919,
+      "dr_roc_auc": 0.9938
+    },
+    "final model (validation)": {
+      "accuracy": 0.8298,
+      "macro_f1": 0.6408,
+      "qwk": 0.867,
+      "dr_accuracy": 0.9675,
+      "dr_sensitivity": 0.937,
+      "dr_specificity": 0.9963,
+      "macro_precision": 0.7226,
+      "macro_recall": 0.6051,
+      "weighted_f1": 0.8147,
+      "dr_precision": 0.9958,
+      "dr_f1": 0.9655,
+      "referable_sensitivity": 0.9064,
+      "referable_specificity": 0.9344,
+      "dr_roc_auc": 0.9973
+    },
+    "camera only (test)": {
+      "accuracy": 0.6971,
+      "macro_f1": 0.3793,
+      "qwk": 0.5989,
+      "dr_accuracy": 0.8648,
+      "dr_sensitivity": 0.749,
+      "dr_specificity": 0.9741,
+      "macro_precision": 0.5246,
+      "macro_recall": 0.3803,
+      "weighted_f1": 0.6405,
+      "dr_precision": 0.9646,
+      "dr_f1": 0.8433,
+      "referable_sensitivity": 0.7255,
+      "referable_specificity": 0.866,
+      "dr_roc_auc": null
+    },
+    "always No DR (test)": {
+      "accuracy": 0.5143,
+      "macro_f1": 0.1358,
+      "qwk": 0.0,
+      "dr_accuracy": 0.5143,
+      "dr_sensitivity": 0.0,
+      "dr_specificity": 1.0,
+      "macro_precision": 0.1029,
+      "macro_recall": 0.2,
+      "weighted_f1": 0.3493,
+      "dr_precision": 0.0,
+      "dr_f1": 0.0,
+      "referable_sensitivity": 0.0,
+      "referable_specificity": 1.0,
+      "dr_roc_auc": null
+    }
+  },
+  "bootstrap_95ci": {
+    "accuracy": {
+      "test": 0.8171,
+      "ci_low": 0.7829,
+      "ci_high": 0.8476
+    },
+    "macro_f1": {
+      "test": 0.6171,
+      "ci_low": 0.5585,
+      "ci_high": 0.6727
+    },
+    "qwk": {
+      "test": 0.8998,
+      "ci_low": 0.8764,
+      "ci_high": 0.9216
+    },
+    "dr_accuracy": {
+      "test": 0.9733,
+      "ci_low": 0.9581,
+      "ci_high": 0.9848
+    },
+    "dr_sensitivity": {
+      "test": 0.9529,
+      "ci_low": 0.9251,
+      "ci_high": 0.9762
+    },
+    "dr_specificity": {
+      "test": 0.9926,
+      "ci_low": 0.9808,
+      "ci_high": 1.0
+    },
+    "dr_roc_auc": {
+      "test": 0.9938,
+      "ci_low": 0.9861,
+      "ci_high": 0.9994
+    }
+  },
+  "mixed_camera": {
+    "camera": "2588x1958",
+    "images": 83,
+    "final model": {
+      "accuracy": 0.8193,
+      "macro_f1": 0.7222,
+      "qwk": 0.9078,
+      "dr_accuracy": 0.988,
+      "dr_sensitivity": 0.9811,
+      "dr_specificity": 1.0,
+      "macro_precision": 0.7269,
+      "macro_recall": 0.7216,
+      "weighted_f1": 0.8178,
+      "dr_precision": 1.0,
+      "dr_f1": 0.9905,
+      "referable_sensitivity": 0.9048,
+      "referable_specificity": 0.9024,
+      "dr_roc_auc": null
+    },
+    "camera only": {
+      "accuracy": 0.3614,
+      "macro_f1": 0.1062,
+      "qwk": 0.0,
+      "dr_accuracy": 0.3614,
+      "dr_sensitivity": 0.0,
+      "dr_specificity": 1.0,
+      "macro_precision": 0.0723,
+      "macro_recall": 0.2,
+      "weighted_f1": 0.1919,
+      "dr_precision": 0.0,
+      "dr_f1": 0.0,
+      "referable_sensitivity": 0.0,
+      "referable_specificity": 1.0,
+      "dr_roc_auc": null
+    }
+  },
+  "mistakes": {
+    "total": 96,
+    "one_stage_away": 72
+  },
+  "gradcam_share_inside_window": {
+    "median": 0.9611,
+    "uniform_map": 0.6009
+  }
+}

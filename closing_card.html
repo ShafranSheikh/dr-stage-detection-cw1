@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Limitations and Future Work</title>
+<style>
+  :root{ --blue:#1f5fad; --blue-lite:#2a78d6; --ink:#12161c; --soft:#5a6472;
+         --muted:#8a94a3; --line:#dfe4ea; --bg:#f7f8fa; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ height:100%; }
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    display:flex; align-items:center; justify-content:center; padding:5vh 5vw;
+  }
+  .wrap{ width:100%; max-width:1500px; }
+  .eyebrow{ font-size:1.1vw; letter-spacing:.24em; text-transform:uppercase;
+            color:var(--blue); font-weight:700; margin-bottom:1vh; }
+  h1{ font-size:2.9vw; font-weight:800; letter-spacing:-0.015em; margin-bottom:1.6vh; }
+
+  .verdict{
+    background:#fff; border:1px solid var(--line); border-left:7px solid var(--blue-lite);
+    border-radius:12px; padding:2.4vh 1.8vw; margin-bottom:3.4vh;
+    font-size:1.75vw; line-height:1.45; font-weight:600;
+  }
+  .verdict b{ color:var(--blue-lite); }
+
+  .cols{ display:grid; grid-template-columns:1fr 1fr; gap:3vw; }
+  h2{ font-size:1.15vw; text-transform:uppercase; letter-spacing:.14em;
+      color:var(--blue); font-weight:800; padding-bottom:1.1vh;
+      border-bottom:2px solid var(--line); margin-bottom:1.8vh; }
+  ul{ list-style:none; }
+  li{ font-size:1.3vw; line-height:1.45; color:var(--ink);
+      padding:0 0 1.5vh 1.5vw; position:relative; }
+  li:before{ content:""; position:absolute; left:0; top:.62vw;
+             width:.55vw; height:.55vw; border-radius:50%; background:var(--blue-lite); }
+  li span{ display:block; color:var(--soft); font-size:1.05vw; margin-top:.25vh; }
+
+  .foot{ margin-top:3.2vh; padding-top:2vh; border-top:1px solid var(--line);
+         font-size:1.1vw; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Discussion</div>
+  <h1>Limitations &amp; Future Work</h1>
+
+  <div class="verdict">
+    The system <b>detects</b> diabetic retinopathy reliably &mdash; and <b>grades</b> its severity unreliably,
+    especially at the severe end.
+  </div>
+
+  <div class="cols">
+    <div>
+      <h2>What limits it</h2>
+      <ul>
+        <li>One dataset, one region, a handful of cameras<span>Nothing here shows it would transfer elsewhere</span></li>
+        <li>One grader per image; 2.1&nbsp;% of labels contradict themselves<span>No model can exceed its labels</span></li>
+        <li>No patient identifiers in APTOS<span>The same eye could sit in two splits</span></li>
+        <li>Severe has only 26 test images<span>Its F1 could be 0.11 or 0.47 &mdash; too wide to call</span></li>
+        <li>It under-grades severe disease<span>14 of 26 Severe eyes were called Moderate</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>What would come next</h2>
+      <ul>
+        <li>Test transfer on EyePACS or IDRiD<span>The largest unknown</span></li>
+        <li>Combine class weights with EfficientNetB3<span>Weights gave the highest sensitivity &mdash; never tried together</span></li>
+        <li>Train a second seed for B3<span>One 17-minute run closes that gap</span></li>
+        <li>Use an ordinal, stage-aware loss<span>75&nbsp;% of errors are one stage away</span></li>
+        <li>Add an &ldquo;image not gradable&rdquo; output<span>Large errors cluster in the blurriest third</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">
+    Before clinical use: prospective validation, several populations and cameras, regulatory approval,
+    and a defined role for the clinician.
+  </div>
+</div>
+</body>
+</html>

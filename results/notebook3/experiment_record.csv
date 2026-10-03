@@ -1,0 +1,6 @@
+experiment,objective,what_changed,why
+E1,Baseline transfer learning,"EfficientNetB0 224 px, variant A, no balancing",Reference point for every other experiment
+E2,Does contrast/edge enhancement help?,Variant B (CLAHE + unsharp) or C (Ben Graham) instead of A,The brief asks for enhancement; published evidence is mixed
+E3,Does class balancing help the rare stages?,Class weights or oversampling instead of none,Severe and Proliferative are 5-8% of the images
+E4,"Is fine-tuning worth it, and at what learning rate?","Phase 1 (frozen backbone) vs phase 2 (top 25% fine-tuned), every run; fine-tuning learning rate 1e-5 vs 1e-4 on the final configuration",Frozen vs fine-tuned costs no extra runs; the learning rate decides how far the pretrained weights move
+E5,Is a different backbone better?,EfficientNetB3 at 300 px; MobileNetV2 at 224 px,"Higher resolution for small lesions; a lighter, familiar network"

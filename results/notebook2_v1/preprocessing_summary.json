@@ -1,0 +1,123 @@
+{
+  "images_processed": 3489,
+  "settings": {
+    "size": 512,
+    "mask_scale": 0.95,
+    "fov_band": 0.74,
+    "clahe_clip": 2.0,
+    "clahe_tiles": [
+      8,
+      8
+    ],
+    "unsharp_sigma": 2.0,
+    "unsharp_amount": 1.0,
+    "ben_graham_sigma": 8.53
+  },
+  "window_share_of_square": 0.601,
+  "median_share_of_retina_kept": 0.831,
+  "share_kept_by_camera": {
+    "1050x1050": 0.758,
+    "2416x1736": 0.874,
+    "2588x1958": 0.876,
+    "3216x2136": 0.859,
+    "2048x1536": 0.761,
+    "819x614": 0.764,
+    "other": 0.832
+  },
+  "height_to_width_by_camera": {
+    "1050x1050": 1.001,
+    "2416x1736": 0.77,
+    "2588x1958": 0.757,
+    "3216x2136": 0.789,
+    "2048x1536": 1.001,
+    "819x614": 1.0,
+    "other": 0.815
+  },
+  "images_per_camera_and_split": {
+    "1050x1050": {
+      "test": 152,
+      "train": 665,
+      "val": 151
+    },
+    "2048x1536": {
+      "test": 43,
+      "train": 260,
+      "val": 48
+    },
+    "2416x1736": {
+      "test": 85,
+      "train": 407,
+      "val": 89
+    },
+    "2588x1958": {
+      "test": 83,
+      "train": 367,
+      "val": 80
+    },
+    "3216x2136": {
+      "test": 48,
+      "train": 267,
+      "val": 59
+    },
+    "819x614": {
+      "test": 48,
+      "train": 202,
+      "val": 37
+    },
+    "other": {
+      "test": 66,
+      "train": 273,
+      "val": 59
+    }
+  },
+  "stage0_share_by_camera": {
+    "1050x1050": 93.1,
+    "2416x1736": 3.8,
+    "2588x1958": 43.6,
+    "3216x2136": 0.5,
+    "2048x1536": 100.0,
+    "819x614": 97.2
+  },
+  "photos_cut_more_than_window": 0,
+  "photos_upscaled": 2,
+  "baselines_val": {
+    "always 'No DR'": {
+      "accuracy": 0.514,
+      "macro_f1": 0.136,
+      "qwk": 0.0,
+      "dr_accuracy": 0.514,
+      "dr_sensitivity": 0.0,
+      "dr_specificity": 1.0
+    },
+    "camera only (image size)": {
+      "accuracy": 0.702,
+      "macro_f1": 0.326,
+      "qwk": 0.602,
+      "dr_accuracy": 0.889,
+      "dr_sensitivity": 0.787,
+      "dr_specificity": 0.985
+    }
+  },
+  "median_contrast": {
+    "A": 15.9,
+    "B": 23.2,
+    "C": 16.7
+  },
+  "median_sharpness": {
+    "A": 24.0,
+    "B": 612.1,
+    "C": 363.7
+  },
+  "camera_recognition_val": {
+    "A": 0.931,
+    "B": 0.933,
+    "C": 0.853
+  },
+  "camera_recognition_chance": 0.325,
+  "archive_mb": {
+    "A": 735,
+    "B": 1123,
+    "C": 1101
+  },
+  "seed": 42
+}
